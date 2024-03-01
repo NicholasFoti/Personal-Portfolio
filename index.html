@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mediaqueries.css">
+    <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Nicholas Foti Portfolio</title>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">NF</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cv">Download CV</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">NF</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="togglemenu()">About</a></li>
+                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+                <li><a href="#cv" onclick="togglemenu()">Download CV</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile" class="first-sections">
+        <div class="section__pic-container">
+            <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                <defs>
+                    <clipPath id="blob">
+                        <path fill="#474bff" d="M449,275Q455,310,434,338Q413,366,394,396Q375,426,340,433.5Q305,441,272.5,444.5Q240,448,204.5,453Q169,458,142,435Q115,412,96,385Q77,358,56.5,332Q36,306,22.5,273Q9,240,14,204Q19,168,48,144.5Q77,121,92,89Q107,57,138,39.5Q169,22,204.5,21Q240,20,277,17Q314,14,334,49Q354,84,391,93.5Q428,103,444.5,135.5Q461,168,452,204Q443,240,449,275Z" />
+                    </clipPath>
+                </defs>
+                <image x="0" y="0" width="100%" height="100%" clip-path="url(#blob)" xlink:href="https://scontent.fper9-1.fna.fbcdn.net/v/t1.6435-9/101535980_2965227610262137_4382520028170699449_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=be3454&amp;_nc_ohc=AHSnaU7TALYAX88VX_S&amp;_nc_ht=scontent.fper9-1.fna&amp;oh=00_AfDnkcoGm-roaGUhF1UEqg_qGv38jdCaNPquZaxwNW-cCg&amp;oe=66079B5D" preserveAspectRatio="xMidYMid slice"></image>
+            </svg>       
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Nicholas Foti</h1>
+            <p class="section__text__p2">Software Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Download CV <i class="fa-solid fa-download"></i></button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
+            </div>
+            <div id="socials-container">
+                <i class="fa-brands fa-linkedin fa-2xl profile-icon" onclick="location.href='https://www.linkedin.com/in/nicholasfoti1008/'"></i>
+                <i class="fa-brands fa-github fa-2xl profile-icon" onclick="location.href='https://github.com/NicholasFoti/'"></i>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="first-sections">
+        <div class="about-text">
+        <h1 class="title-about">About Me</h1>
+        </div>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <i class="fa-solid fa-medal"></i>
+                        <h3>Experience</h3>
+                        <p>B.Sc. Bachelors Degree <br /> Major: Software</p>
+                    </div>
+                    <div class="details-container">
+                        <i class="fa-solid fa-school"></i>
+                        <h3>Education</h3>
+                        <p>B.Sc. Bachelors Degree <br /> Major: Software</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>I am a determined computer science student majoring in software engineering looking to break into 
+                        the industry with my first piece of professional experience. I am ready to apply my fast-learning 
+                        abilities and theoretical knowledge that I have gained, into practical real-world problems. Eager to 
+                        immerse myself in a professional setting, I am seeking an experience that offers both a stimulating yet 
+                        challenging environment for me to test my skills and gain new ones along the way.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-top-1709205747">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="custom-shape-divider-bottom-1709205592">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/youtube.png" alt="Project one picture" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Youtube Media Converter</h2>
+                    <p>My friends and I were always wanting to download sound clips from youtube videos or the entire youtube video iteself.<br /><br /> there are plenty of converters out there however the issue is they are absolutely littered with ad's! Thats why I decided to make 
+                        this applicaiton where we could use it ad free whenever we wanted!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/YoutubeToMP3Converter'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://nifo-youtube-to-mp3-mp4-converter.onrender.com'">Live Preview</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/bst-21.png" alt="Project one picture" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">BST-AVL Tree Visualiser</h2>
+                    <p>Created a user friendly Python program to allow users to create and manipulate their own binary search tree structure<br /><br />
+                        The program comes with functions to add, delete, and search for nodes as well as manipulate the tree as they wish.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/YoutubeToMP3Converter'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://nifo-youtube-to-mp3-mp4-converter.onrender.com'">Live Preview</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/youtube.png" alt="Project one picture" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Dictionary Application</h2>
+                    <p>Created a C++ program that allows users to load a dictionary file into the application and perform certain tasks to manipulate the dictionary.<br /><br />
+                        The application can search, add and remove words and definitions as well as list palindromes, and find rhyming words. The application also acts as a cheat for the online word game 'Wordle'
+                        where it provides the answer once given a set of parameters.
+                     </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/YoutubeToMP3Converter'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://nifo-youtube-to-mp3-mp4-converter.onrender.com'">Live Preview</button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/youtube.png" alt="Project one picture" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Three</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/YoutubeToMP3Converter'">GitHub</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://nifo-youtube-to-mp3-mp4-converter.onrender.com'">Live Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="first-sections">
+            <p class="section__text__p1">Get In Touch</p>
+            <h1 class="title-about">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <i class="fa-solid fa-envelope fa-2xl fa-bounce"></i>
+                <p><a href="mailto:nickfoti@hotmail.com">nickfoti@hotmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <i class="fa-brands fa-linkedin fa-bounce fa-2xl contact-icon" onclick="location.href='https://www.linkedin.com/in/nicholasfoti1008/'"></i>
+                <p><a href="https://www.linkedin.com/in/nicholasfoti1008/">LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="custom-shape-divider-top-1709275194">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cv">Download CV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Nicholas Foti. All Rights Reserved.</p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>
