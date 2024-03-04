@@ -1,18 +1,20 @@
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 5000px) {
   .about-containers {
     flex-wrap: wrap;
   }
   #contact,
   #projects {
     height: fit-content;
+  }
+}
+
+@media screen and (min-width: 2000px){
+  #about{
+    height: 70vh;
   }
 }
 
 @media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
   .about-containers {
     flex-wrap: wrap;
   }
@@ -22,6 +24,34 @@
   }
 }
 
+@media screen and (min-width: 1401px) {
+
+  .project-containers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 6rem; 
+    justify-content: center; 
+    align-items: start; 
+    max-width: 1200px; 
+    min-height: 100vh; 
+    margin: 0 auto; 
+  }
+
+  .project-details-container {
+    width: 100%;
+    max-width: none;
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space between items */
+    height: 100%; /* Make sure all containers take up the same height */
+    /* Remove the max-height if it was set before */
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 @media screen and (max-width: 1500px) {
   #desktop-nav {
@@ -40,6 +70,8 @@
   }
   #about{
     margin: 0;
+    display: flex;
+    flex-direction: column;
   }
   #contact{
     height: 70vh;
@@ -49,16 +81,19 @@
   .contact-info-upper-container{
     width: 100%;
   }
-  #about,
   .section-container {
     display: block;
   }
-  .about-text{
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    margin-right: 0;
-    padding-top: 2rem;
+  .project-details-container{
+    margin: 2rem;
+  }
+  .about-text {
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    width: 100%;
+    padding-top: 2rem;      
+    margin-right: 0;        
   }
   .text-container{
     padding-bottom: 2rem;
@@ -70,6 +105,9 @@
   .section-container {
     height: fit-content;
   }
+  .title-about{
+    text-align: center;
+  }
   section {
     margin: 0 5%;
   }
@@ -78,8 +116,12 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
+  .section-container{
+    margin: 0;
+  }
   .about-containers {
     margin-top: 0;
+    flex-direction: row;
   }
 }
 
@@ -93,6 +135,9 @@ footer {
     align-items: center;
   }
   #about{
+    margin: 0;
+  }
+  .section-container{
     margin: 0;
   }
   #profile {
