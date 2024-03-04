@@ -22,7 +22,8 @@
   }
 }
 
-@media screen and (max-width: 1400px) {
+
+@media screen and (max-width: 1500px) {
   #desktop-nav {
     display: none;
   }
@@ -83,15 +84,13 @@
 }
 
 @media screen and (max-width: 600px) {
-  footer {
-    height: 40vh;
+footer {
+  height: 40vh;
   }
-  #contact{
-    #contact{
-      height: 100vh;
-      margin: 0;
-      align-items: center;
-    }
+#contact{
+    height: 100vh;
+    margin: 0;
+    align-items: center;
   }
   #about{
     margin: 0;
