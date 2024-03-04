@@ -366,6 +366,8 @@ section{
 .contact-info-upper-container{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  width: auto;
   border-radius: 2rem;
   align-items: center;
   border: black 0.3rem solid;
@@ -384,6 +386,7 @@ section{
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  flex-direction: row;
 }
 
 #contact h1{
