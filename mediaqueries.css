@@ -1,3 +1,8 @@
+@media screen and (min-height: 900px){
+  #profile{
+    height: 80vh;
+  }
+}
 @media screen and (max-width: 5000px) {
   .about-containers {
     flex-wrap: wrap;
@@ -123,6 +128,9 @@
     margin-top: 0;
     flex-direction: row;
   }
+  .about-details-container{
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -200,5 +208,19 @@ footer {
   }
   .text-container {
     text-align: justify;
+  }
+  .scroller{
+    max-width: 300px;
+  }
+  .scroller__inner {
+    animation: none; /* Stop the animation on mobile if it's causing issues */
+    flex-wrap: wrap; /* Stack tags on small screens */
+    justify-content: center; /* Center tags when stacked */
+  }
+  
+  .tag-list li {
+    /* Adjust size and spacing for mobile */
+    font-size: 0.75rem;
+    padding: 0.5rem;
   }
 }

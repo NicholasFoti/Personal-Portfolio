@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/mediaqueries.css">
     <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Nicholas Foti Portfolio</title>
 </head>
@@ -69,10 +70,15 @@
         <div class="section-container">
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
-                        <i class="fa-solid fa-medal"></i>
-                        <h3>Experience ADD IMAGE CAROUSEL ABOVE HERE</h3>
-                        <p>Python, C++,</p>
+                    <div class="scroller">
+                        <ul class="tag-list scroller__inner">
+                            <li>HTML<i class="fa-brands fa-html5 fa-2xl"></i></li>
+                            <li>CSS<i class="fa-brands fa-css3-alt fa-2xl"></i></i></li>
+                            <li>JS<i class="fa-brands fa-js fa-2xl"></i></li>
+                            <li>Python<i class="fa-brands fa-python fa-2xl"></i></li>
+                            <li>C++<i class="devicon-cplusplus-plain"></i></li>
+                            <li>Java<i class="fa-brands fa-java fa-2xl"></i></li>
+                        </ul>
                     </div>
                     <div class="details-container">
                         <i class="fa-solid fa-school"></i>
@@ -138,6 +144,15 @@
                 </div>
                 <div class="project-details-container color-container">
                     <div class="article-container">
+                        <img src="./assets/youtube.png" alt="Project one picture" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Game of Life - Mobile App</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/YoutubeToMP3Converter'">GitHub</button>
+                    </div>
+                </div>
+                <div class="project-details-container color-container">
+                    <div class="article-container">
                         <img src="./assets/dictionary.png" alt="Project one picture" class="project-img">
                     </div>
                     <h2 class="experience-sub-title project-title">Dictionary Application</h2>
@@ -147,17 +162,19 @@
                      </p>
                     <div class="btn-container">
                         <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/Dictionary-Application'">GitHub</button>
-                        <button class="btn btn-color-2 project-btn">Live Preview</button>
                     </div>
                 </div>
                 <div class="project-details-container color-container">
                     <div class="article-container">
-                        <img src="./assets/youtube.png" alt="Project one picture" class="project-img">
+                        <img src="./assets/dictionary.png" alt="Project one picture" class="project-img">
                     </div>
-                    <h2 class="experience-sub-title project-title">Project Three</h2>
+                    <h2 class="experience-sub-title project-title">Dictionary Application</h2>
+                    <p>Created a C++ program that allows users to load a dictionary file into the application and perform certain tasks to manipulate the dictionary.<br /><br />
+                        The application can search, add and remove words and definitions as well as list palindromes, and find rhyming words. The application also acts as a cheat for the online word game 'Wordle'
+                        where it provides the answer once given a set of parameters.
+                     </p>
                     <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/YoutubeToMP3Converter'">GitHub</button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://nifo-youtube-to-mp3-mp4-converter.onrender.com'">Live Preview</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NicholasFoti/Dictionary-Application'">GitHub</button>
                     </div>
                 </div>
             </div>
