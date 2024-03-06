@@ -540,13 +540,10 @@ footer a:hover{
 .tag-list li{
   padding: 1rem;
   background: rgb(56, 56, 56);
-  color: white;
   border-radius: 0.5rem;
-  border: 1px solid white;
   display: flex; /* Use flexbox for positioning child elements */
   align-items: center; /* Align the icon and text vertically */
-  justify-content: space-between;
-  margin: 0.5rem;
+  justify-content: center;
   box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.5);
 }
 
@@ -586,6 +583,12 @@ footer a:hover{
   to{
     transform: translate(calc(-50% - 0.5rem));
   }
+}
+
+.tag-list img{
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
 }
 
 /*WAVES*/
