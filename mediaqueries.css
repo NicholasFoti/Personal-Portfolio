@@ -45,16 +45,14 @@
   .project-details-container {
     width: 100%;
     max-width: none;
-    display: flex; /* Use flexbox for internal alignment */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Distribute space between items */
-    height: 100%; /* Make sure all containers take up the same height */
-    /* Remove the max-height if it was set before */
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
   }
 
   .project-img {
     width: 100%;
-    height: auto;
   }
 }
 
