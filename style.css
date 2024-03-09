@@ -110,6 +110,7 @@ a:hover{
 
 .menu-links a{
   display: block;
+  cursor: pointer;
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
