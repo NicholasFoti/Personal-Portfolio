@@ -561,17 +561,18 @@ footer a:hover{
   margin-top: 3rem;
 }
 
-.scroller[data-animated="true"]{
+.scroller{
   overflow: hidden;
   -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.scroller[data-animated="true"] .scroller__inner{
+.scroller .scroller__inner{
   flex-wrap: nowrap;
   animation: scroll 15s linear infinite;
   width: fit-content;
 }
+
 
 .scroller__inner{
   display: flex;

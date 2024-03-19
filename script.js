@@ -6,13 +6,11 @@ function togglemenu(){
 }
 
 const scrollers = document.querySelectorAll(".scroller");
-if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    addAnimation();
-}
+  addAnimation();
+
 
 function addAnimation(){
     scrollers.forEach(scroller => {
-        scroller.setAttribute('data-animated', true)
 
     // Make an array from the elements within `.scroller-inner`
     const scrollerInner = scroller.querySelector(".scroller__inner");
