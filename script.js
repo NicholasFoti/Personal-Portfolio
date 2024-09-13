@@ -26,3 +26,7 @@ function addAnimation(){
     });
   });
 }
+
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual'; // Disables scroll position restoration
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <title>Nicholas Foti Portfolio</title>
 </head>
 <body>
@@ -38,8 +39,8 @@
             </div>
         </div>
     </nav>
-    <section id="profile" class="first-sections">
-        <div class="section__pic-container">
+    <section id="profile" class="first-sections" data-aos="fade-in">
+        <div class="section__pic-container" data-aos="zoom-in" data-aos-delay="300">
             <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
                 <defs>
                     <clipPath id="blob">
@@ -49,7 +50,7 @@
                 <image x="0" y="0" width="100%" height="100%" clip-path="url(#blob)" xlink:href="https://media.licdn.com/dms/image/v2/D4E03AQFi7Ap1W6880A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1686154727427?e=1731542400&amp;v=beta&amp;t=hbx6-fu7aduoTCxttXSV7btiPUfX3a-GQufmBkCR7sg" preserveAspectRatio="xMidYMid slice"></image>
             </svg>
         </div>
-        <div class="section__text">
+        <div class="section__text" data-aos="fade-left" data-aos-delay="600">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Nicholas Foti</h1>
             <p class="section__text__p2">Software Engineer</p>
@@ -65,11 +66,11 @@
     </section>
     <section id="about" class="first-sections">
         <div class="about-text">
-        <h1 class="title-about">About Me</h1>
+        <h1 class="title-about" data-aos="zoom-in">About Me</h1>
         </div>
         <div class="section-container">
             <div class="about-details-container">
-                <div class="about-containers">
+                <div class="about-containers" data-aos="fade-right">
                     <div class="scroller">
                         <ul class="tag-list scroller__inner">
                             <li class="html">HTML<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></li>
@@ -89,7 +90,7 @@
                         <p>Bachelor of Computer Science <br /> Major: Software Engineering</p>
                     </div>
                 </div>
-                <div class="text-container">
+                <div class="text-container" data-aos="fade-left">
                     <p>I am a determined computer science student majoring in software engineering, looking to break into 
                         the industry with my first piece of professional experience. I am ready to apply my fast-learning 
                         abilities and theoretical knowledge that I have gained to practical, real-world problems. Eager to 
@@ -114,73 +115,74 @@
             </svg>
         </div>
     </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="project-containers">
-                <div class="project-details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/youtube.png" alt="Project one picture" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Youtube Media Converter</h2>
-                    <p>Developed an application that allows for the conversion of YouTube videos to either .mp3 or .mp4 files.<br /><br />I created it as it was useful within my friend group as we would often want to use
-                        soundclips from videos in our projects.
-                    </p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NicholasFoti/YoutubeToMP3Converter')">GitHub</button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://nifo-youtube-to-mp3-mp4-converter.onrender.com')">Live Preview</button>
-                    </div>
+    <section id="projects" data-aos="fade-up">
+        <div class="section-header">
+            <p class="section__text__p1">Browse My Recent</p>
+            <h1 class="title">Projects</h1>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project Card 1: YouTube Media Converter -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fa-brands fa-youtube fa-3x"></i>
                 </div>
-                <div class="project-details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/bst-21.png" alt="Project one picture" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">BST-AVL Tree Visualiser</h2>
-                    <p>Created a user friendly Python program to allow users to create and manipulate their own binary search tree structure<br /><br />
-                        The program comes with functions to add, delete, and search for nodes as well as manipulate the tree as they wish.
-                    </p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NicholasFoti/BST-AVL-Tree-Visualiser')">GitHub</button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.online-python.com/Exr04pCsyK')">Live Preview</button>
-                    </div>
+                <h3 class="project-title">YouTube Media Converter</h3>
+                <p class="project-description">Convert YouTube videos to either .mp3 or .mp4 files. Perfect for extracting sound clips for personal projects.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/YoutubeToMP3Converter')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://nifo-youtube-to-mp3-mp4-converter.onrender.com')">Live Preview</button>
                 </div>
-                <div class="project-details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/gameoflife.gif" alt="Project one picture" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Game of Life - Mobile App</h2>
-                    <p>Created a mobile application based on Conways 'Game of Life'. This app was coding in lua using the Solar2D game engine.<br /><br />The app allows users to create their own grid or generate a 
-                        random grid based on the grid size they choose. There are controls to alter the game speed, and an option to save your game and return later. </p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NicholasFoti/Conways-Game-of-Life')">GitHub</button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://nfotigameoflife.netlify.app')">Live Preview</button>
-                    </div>
+            </div>
+    
+            <!-- Project Card 2: BST-AVL Tree Visualiser -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fa fa-tree fa-3x"></i>
                 </div>
-                <div class="project-details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/dictionary.png" alt="Project one picture" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Dictionary Application</h2>
-                    <p>Created a C++ program that allows users to load a dictionary file into the application and perform certain tasks to manipulate the dictionary.<br /><br />
-                        The application can search, add and remove words and definitions as well as list palindromes, and find rhyming words. The application also acts as a cheat for the online word game 'Wordle'
-                        where it provides the answer once given a set of parameters.
-                     </p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NicholasFoti/Dictionary-Application')">GitHub</button>
-                    </div>
+                <h3 class="project-title">BST-AVL Tree Visualiser</h3>
+                <p class="project-description">Create and manipulate your own binary search tree structure. Add, delete, and search nodes visually.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/BST-AVL-Tree-Visualiser')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://www.online-python.com/Exr04pCsyK')">Live Preview</button>
                 </div>
-                <div class="project-details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/weather.png" alt="Project one picture" class="project-img">
-                    </div>
-                    <h2 class="experience-sub-title project-title">Live Weather and Forecast Checker</h2>
-                    <p>Created a web application that allows the user to check the current weather including temperature, humidity, and wind speed of their chosen location.<br /><br />Also displays the following 5 day forcast to the user of their selected area.
-                     </p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NicholasFoti/Weather-App')">GitHub</button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://nfotiweather.netlify.app')">Live Preview</button>
-                    </div>
+            </div>
+    
+            <!-- Project Card 3: Game of Life - Mobile App -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fa fa-gamepad fa-3x"></i>
+                </div>
+                <h3 class="project-title">Game of Life - Mobile App</h3>
+                <p class="project-description">A mobile application based on Conway's Game of Life. Create, simulate, and save custom grids.</p>                
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/Conways-Game-of-Life')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://nfotigameoflife.netlify.app')">Live Preview</button>
+                </div>
+            </div>
+    
+            <!-- Project Card 4: Dictionary Application -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fa fa-book fa-3x"></i>
+                </div>
+                <h3 class="project-title">Dictionary Application</h3>
+                <p class="project-description">A C++ program to load, manipulate, and search dictionary files. Includes features like palindrome finder and Wordle cheats.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/Dictionary-Application')">GitHub</button>
+                </div>
+            </div>
+    
+            <!-- Project Card 5: Live Weather Checker -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fa fa-cloud-sun fa-3x"></i>
+                </div>
+                <h3 class="project-title">Live Weather and Forecast Checker</h3>
+                <p class="project-description">Check live weather conditions and get a 5-day forecast for your selected location.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/Weather-App')">GitHub</button>
+                    <button class="btn btn-color-2" onclick="window.open('https://nfotiweather.netlify.app')">Live Preview</button>
                 </div>
             </div>
         </div>
@@ -214,8 +216,17 @@
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169; 2024 Nicholas Foti. All Rights Reserved.</p>
+        <p>&copy; 2024 Nicholas Foti. All Rights Reserved.</p>
     </footer>
     <script src="/script.js"></script>
+
+        <!-- AOS Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1200, // Animation duration
+                once: true // Animation happens only once on scroll
+            });
+        </script>
 </body>
 </html>
