@@ -1,232 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags for SEO and Responsiveness -->
     <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of Nicholas Foti - Software Engineer specializing in web development and software engineering.">
+    <meta name="keywords" content="Nicholas Foti, Software Engineer, Portfolio, Web Developer, Projects">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Logo.ico" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Nicholas Foti | Portfolio</title>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="/mediaqueries.css">
-    <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <title>Nicholas Foti Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Orbitron:wght@400..900&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">NF</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a onclick="window.open('./assets/Nicholas Foti Software Resume.pdf')">Download CV</a></li>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo on the left -->
+            <a href="#hero" class="navbar-logo">
+                <img src="/assets/Logo.png" alt="Logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><p>|</p></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="assets/Nicholas Foti Software Resume.pdf" target="_blank">DOWNLOAD CV</a></li>
+                <li><p>|</p></li>
             </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">NF</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="togglemenu()">
+            
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="togglemenu()">About</a></li>
-                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
-                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
-                <li><a onclick="window.open('./assets/Nicholas Foti Software Resume.pdf')">Download CV</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile" class="first-sections" data-aos="fade-in">
-        <div class="section__pic-container" data-aos="zoom-in" data-aos-delay="300">
-            <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-                <defs>
-                    <clipPath id="blob">
-                        <path fill="#474bff" d="M398,316.5Q362,393,278,417Q194,441,120,387Q46,333,55.5,244.5Q65,156,127,87Q189,18,286.5,39Q384,60,409,150Q434,240,398,316.5Z" />
-                    </clipPath>
-                </defs>
-                <image x="0" y="0" width="100%" height="100%" clip-path="url(#blob)" xlink:href="https://media.licdn.com/dms/image/v2/D4E03AQFi7Ap1W6880A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1686154727427?e=1731542400&amp;v=beta&amp;t=hbx6-fu7aduoTCxttXSV7btiPUfX3a-GQufmBkCR7sg" preserveAspectRatio="xMidYMid slice"></image>
-            </svg>
-        </div>
-        <div class="section__text" data-aos="fade-left" data-aos-delay="600">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Nicholas Foti</h1>
-            <p class="section__text__p2">Software Engineer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Nicholas Foti Software Resume.pdf')">Download CV <i class="fa-solid fa-download"></i></button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
-            </div>
-            <div id="socials-container">
-                <i class="fa-brands fa-linkedin fa-2xl profile-icon" onclick="location.href='https://www.linkedin.com/in/nicholasfoti1008/'"></i>
-                <i class="fa-brands fa-github fa-2xl profile-icon" onclick="location.href='https://github.com/NicholasFoti/'"></i>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="first-sections">
-        <div class="about-text">
-        <h1 class="title-about" data-aos="zoom-in">About Me</h1>
-        </div>
-        <div class="section-container">
-            <div class="about-details-container">
-                <div class="about-containers" data-aos="fade-right">
-                    <div class="scroller">
-                        <ul class="tag-list scroller__inner">
-                            <li class="html">HTML<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></li>
-                            <li class="css">CSS<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></li>
-                            <li class="js">JS<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></li>
-                            <li class="lua">C#<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" /></li>
-                            <li class="python">Python<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></li>
-                            <li class="cplus">C++<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /></li>
-                            <li class="java">Java<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /></li>
-                            <li class="nodejs">Node.js<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" /></li>
-                            <li class="git">Git<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /></li>
-                        </ul>
-                    </div>
-                    <div class="details-container">
-                        <i class="fa-solid fa-school"></i>
-                        <h3>Education</h3>
-                        <p>Bachelor of Computer Science <br /> Major: Software Engineering</p>
-                    </div>
-                </div>
-                <div class="text-container" data-aos="fade-left">
-                    <p>I am a determined computer science student majoring in software engineering, looking to break into 
-                        the industry with my first piece of professional experience. I am ready to apply my fast-learning 
-                        abilities and theoretical knowledge that I have gained to practical, real-world problems. Eager to 
-                        immerse myself in a professional setting, I am seeking an experience that offers both a stimulating and 
-                        challenging environment for me to test my skills and acquire new ones along the way.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="custom-shape-divider-top-1709205747">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        <div class="custom-shape-divider-bottom-1709205592">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
-    <section id="projects" data-aos="fade-up">
-        <div class="section-header">
-            <p class="section__text__p1">Browse My Recent</p>
-            <h1 class="title">Projects</h1>
-        </div>
-        
-        <div class="projects-grid">
-            <!-- Project Card 1: YouTube Media Converter -->
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fa-brands fa-youtube fa-3x"></i>
-                </div>
-                <h3 class="project-title">YouTube Media Converter</h3>
-                <p class="project-description">Convert YouTube videos to either .mp3 or .mp4 files. Perfect for extracting sound clips for personal projects.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/YoutubeToMP3Converter')">GitHub</button>
-                    <button class="btn btn-color-2" onclick="window.open('https://nifo-youtube-to-mp3-mp4-converter.onrender.com')">Live Preview</button>
-                </div>
-            </div>
-    
-            <!-- Project Card 2: BST-AVL Tree Visualiser -->
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fa fa-tree fa-3x"></i>
-                </div>
-                <h3 class="project-title">BST-AVL Tree Visualiser</h3>
-                <p class="project-description">Create and manipulate your own binary search tree structure. Add, delete, and search nodes visually.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/BST-AVL-Tree-Visualiser')">GitHub</button>
-                    <button class="btn btn-color-2" onclick="window.open('https://www.online-python.com/Exr04pCsyK')">Live Preview</button>
-                </div>
-            </div>
-    
-            <!-- Project Card 3: Game of Life - Mobile App -->
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fa fa-gamepad fa-3x"></i>
-                </div>
-                <h3 class="project-title">Game of Life - Mobile App</h3>
-                <p class="project-description">A mobile application based on Conway's Game of Life. Create, simulate, and save custom grids.</p>                
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/Conways-Game-of-Life')">GitHub</button>
-                    <button class="btn btn-color-2" onclick="window.open('https://nfotigameoflife.netlify.app')">Live Preview</button>
-                </div>
-            </div>
-    
-            <!-- Project Card 4: Dictionary Application -->
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fa fa-book fa-3x"></i>
-                </div>
-                <h3 class="project-title">Dictionary Application</h3>
-                <p class="project-description">A C++ program to load, manipulate, and search dictionary files. Includes features like palindrome finder and Wordle cheats.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/Dictionary-Application')">GitHub</button>
-                </div>
-            </div>
-    
-            <!-- Project Card 5: Live Weather Checker -->
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fa fa-cloud-sun fa-3x"></i>
-                </div>
-                <h3 class="project-title">Live Weather and Forecast Checker</h3>
-                <p class="project-description">Check live weather conditions and get a 5-day forecast for your selected location.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2" onclick="window.open('https://github.com/NicholasFoti/Weather-App')">GitHub</button>
-                    <button class="btn btn-color-2" onclick="window.open('https://nfotiweather.netlify.app')">Live Preview</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="first-sections">
-            <p class="section__text__p1">Get In Touch</p>
-            <h1 class="title-about">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <i class="fa-solid fa-envelope fa-2xl fa-bounce"></i>
-                <p><a href="mailto:nickfoti@hotmail.com">nickfoti@hotmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <i class="fa-brands fa-linkedin fa-bounce fa-2xl contact-icon" onclick="location.href='https://www.linkedin.com/in/nicholasfoti1008/'"></i>
-                <p><a href="https://www.linkedin.com/in/nicholasfoti1008/">LinkedIn</a></p>
-            </div>
-        </div>
-        <div class="custom-shape-divider-top-1709275194">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a onclick="window.open('./assets/Nicholas Foti Software Resume.pdf')">Download CV</a></li>
-                </ul>
             </div>
         </nav>
-        <p>&copy; 2024 Nicholas Foti. All Rights Reserved.</p>
-    </footer>
-    <script src="/script.js"></script>
+    </header>
 
-        <!-- AOS Script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1200, // Animation duration
-                once: true // Animation happens only once on scroll
-            });
-        </script>
+    <!-- Main Content -->
+    <main>
+
+        <!-- Navigation Dots Sidebar -->
+        <div class="navigation-dots">
+            <a href="#hero" class="dot" aria-label="Go to Hero Section"></a>
+            <a href="#about" class="dot" aria-label="Go to About Section"></a>
+            <a href="#projects" class="dot" aria-label="Go to Projects Section"></a>
+            <a href="#contact" class="dot" aria-label="Go to Contact Section"></a>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container hero-container"> 
+                <div class="hero-text">
+                    <p>Hello, I'm</p>
+                    <h1>NICHOLAS FOTI</h1>
+                    <h2>Software Engineer</h2>
+                    <div class="hero-buttons">
+                        <a href="assets/Nicholas Foti Software Resume.pdf" class="btn" target="_blank">Download CV <i class="fa-solid fa-download"></i></a>
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/nicholasfoti1008/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/NicholasFoti/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">  
+                    <img src="/assets/nobackground.png">           
+                </div>
+            </div>
+        </section>
+        <hr class="divider">
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container" data-aos="fade-up">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>ABOUT ME</h2>
+                        <p>I am a determined computer science student majoring in software engineering, Eager to immerse myself in a professional setting, I am seeking experiences that offers both a stimulating and challenging environment for me to test my skills and acquire new ones along the way.</p>
+                        <div class="about-education">
+                            <h3>EDUCATION</h3>
+                            <div class="education-card">
+                                <div>
+                                    <p>Edith Cowan University, 2022 - 2024</p>
+                                    <p><strong>BACHELOR:</strong> Computer Science</p>
+                                    <p><strong>MAJOR:</strong> Software Engineering</p>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <h2>SKILLS</h2>
+                        <ul class="skills-list">
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                <span>HTML5</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                                <span>CSS3</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                                <span>C#</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                                <span>C++</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                                <span>PYTHON</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                <span>JAVASCRIPT</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                                <span>SQL</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
+                                <span>NODE.JS</span>
+                            </li>
+                            <li>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                                <span>GIT</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="divider">
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container" data-aos="fade-up">
+                <h2>PROJECTS</h2>
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web-app">Web App</button>
+                    <button class="filter-btn" data-filter="algorithm">Data Algorithm</button>
+                    <button class="filter-btn" data-filter="mobile-app">Mobile App</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-category="web-app">
+                        <i class="fa-brands fa-youtube fa-3x" style="color: #39a0e0;"></i>
+                        <h3>YOUTUBE MEDIA CONVERTER</h3>
+                        <p>Convert YouTube videos to either .mp3 or .mp4 files. Perfect for extracting sound clips for personal projects.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NicholasFoti/YoutubeToMP3Converter" target="_blank">GitHub</a>
+                            <a href="https://nifo-youtube-to-mp3-mp4-converter.onrender.com" target="_blank">Live Preview</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card binary" data-category="algorithm">
+                        <i class="ti ti-binary-tree"></i>
+                        <h3>BST-AVL TREE VISUALISER</h3>
+                        <p>Create and manipulate your own binary search tree structure. Add, delete, and search nodes visually.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NicholasFoti/BST-AVL-Tree-Visualiser" target="_blank">GitHub</a>
+                            <a href="https://www.online-python.com/Exr04pCsyK" target="_blank">Live Preview</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-category="mobile-app">
+                        <i class="fa fa-gamepad fa-3x" style="color: #39a0e0;"></i>
+                        <h3>GAME OF LIFE - MOBILE APP</h3>
+                        <p>A mobile application based on Conway's Game of Life. Create, simulate, and save custom grids.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NicholasFoti/Conways-Game-of-Life" target="_blank">GitHub</a>
+                            <a href="https://nfotigameoflife.netlify.app" target="_blank">Live Preview</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                    <div class="project-card">
+                        <i class="fa fa-book fa-3x" style="color: #39a0e0;"></i>
+                        <h3>DICTIONARY APPLICATION</h3>
+                        <p>A C++ program to load, manipulate, and search dictionary files. Includes features like palindrome finder and Wordle cheats.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NicholasFoti/Dictionary-Application" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                    <div class="project-card" data-category="web-app"> 
+                        <i class="fa fa-cloud-sun fa-3x" style="color: #39a0e0;"></i>
+                        <h3>LIVE WEATHER AND FORECAST CHECKER</h3>
+                        <p>Check live weather conditions and get a 5-day forecast for your selected location.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NicholasFoti/Weather-App" target="_blank">
+                                GitHub
+                            </a>
+                            <a href="https://nfotiweather.netlify.app" target="_blank">
+                                Live Preview 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="divider">
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container" data-aos="fade-up">
+                <h2>CONTACT ME</h2>
+                <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea type="text" name="message" rows="5" required placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nickfoti@hotmail.com">nickfoti@hotmail.com</a></p>
+                    <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/nicholasfoti1008/" target="_blank">LinkedIn</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr class="divider">
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2024 Nicholas Foti. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="assets/Nicholas Foti Software Resume.pdf" target="_blank">Download CV</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Thank you for your message!</p>
+        </div>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Animation duration
+            once: true // Animation happens only once on scroll
+        });
+    </script>
 </body>
 </html>
