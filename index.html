@@ -26,24 +26,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Orbitron:wght@400..900&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-        <!-- Matomo -->
-    <script>
-      var _paq = window._paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="https://nfotiportfolionetlifyapp.matomo.cloud/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.async=true; g.src='https://cdn.matomo.cloud/nfotiportfolionetlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <!-- End Matomo Code -->
 </head>
-
 <body>
     <!-- Header and Navigation -->
     <header>
@@ -239,7 +222,7 @@
 
         <!-- Contact Section -->
         <section id="contact">
-            <div class="container" data-aos="fade-up">
+            <div class="container">
                 <h2>CONTACT ME</h2>
                 <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
                 <div class="contact-form">
@@ -254,14 +237,10 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea type="text" name="message" rows="5" required placeholder="Your Message"></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:nickfoti@hotmail.com">nickfoti@hotmail.com</a></p>
-                    <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/nicholasfoti1008/" target="_blank">LinkedIn</a></p>
                 </div>
             </div>
         </section>
@@ -289,6 +268,17 @@
     
     <!-- JavaScript Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <!-- emailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "NuWRWBGNtMcdKyqkH",
+        });
+    })();
+    </script>
+
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

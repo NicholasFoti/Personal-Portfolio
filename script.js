@@ -24,9 +24,24 @@ window.onclick = function(event) {
 
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    // TODO: Implement form submission logic here
-    modal.style.display = "block";
-    contactForm.reset();
+
+    // Collect form data
+    const templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    // Send email using EmailJS
+    emailjs.send('service_1j3hi3i', 'template_cabh7lo', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            modal.style.display = "block";
+            contactForm.reset();      
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('An error occurred while sending your message. Please try again later.');
+        });
 });
 
 // Smooth Scroll for Anchor Links
