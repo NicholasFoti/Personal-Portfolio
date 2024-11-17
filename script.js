@@ -9,6 +9,7 @@ hamburger.addEventListener('click', () => {
 
 // Form Submission Handler
 const contactForm = document.getElementById('contact-form');
+const sendButton = document.getElementById('send-button');
 const modal = document.getElementById('myModal');
 const closeButton = document.querySelector('.close-button');
 
@@ -25,6 +26,10 @@ window.onclick = function(event) {
 contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
+        // Show loading spinner
+        sendButton.innerHTML = '<span class="spinner"></span>';
+        sendButton.disabled = true;
+
     // Collect form data
     const templateParams = {
         name: document.getElementById('name').value,
@@ -37,8 +42,11 @@ contactForm.addEventListener('submit', function (e) {
     emailjs.send('service_1j3hi3i', 'template_cabh7lo', templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            sendButton.innerHTML = 'Send Message';
+            sendButton.disabled = false;
             modal.style.display = "block";
-            contactForm.reset();      
+            contactForm.reset();
+                  
         }, function(error) {
             console.log('FAILED...', error);
             alert('An error occurred while sending your message. Please try again later.');
