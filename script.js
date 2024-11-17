@@ -8,48 +8,49 @@ hamburger.addEventListener('click', () => {
 });
 
 // Form Submission Handler
-document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('contact-form');
-    const sendButton = document.getElementById('send-button');
-    const modal = document.getElementById('myModal');
+const contactForm = document.getElementById('contact-form');
+const sendButton = document.getElementById('send-button');
+const modal = document.getElementById('myModal');
+const closeButton = document.querySelector('.close-button');
 
-    contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
+closeButton.onclick = function() {
+    modal.style.display = "none";
+}
 
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+        // Show loading spinner
         sendButton.innerHTML = '<span class="spinner"></span>';
         sendButton.disabled = true;
 
-        const templateParams = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value,
-        };
+    // Collect form data
+    const templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        from_name: document.getElementById('name').value
+    };
 
-        try {
-            const response = await fetch('/.netlify/functions/sendEmail', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(templateParams),
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                console.log(result.message);
-                modal.style.display = "block";
-                contactForm.reset();
-            } else {
-                console.error('Error:', result.error);
-                alert('Failed to send the email. Please try again.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again later.');
-        } finally {
+    // Send email using EmailJS
+    emailjs.send('service_1j3hi3i', 'template_cabh7lo', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
             sendButton.innerHTML = 'Send Message';
             sendButton.disabled = false;
-        }
-    });
+            modal.style.display = "block";
+            contactForm.reset();
+
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('An error occurred while sending your message. Please try again later.');
+        });
 });
 
 // Typewriter Effect
