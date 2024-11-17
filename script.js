@@ -12,6 +12,8 @@ const contactForm = document.getElementById('contact-form');
 const sendButton = document.getElementById('send-button');
 const modal = document.getElementById('myModal');
 const closeButton = document.querySelector('.close-button');
+const serviceId = process.env.EMAILJS_SERVICE_ID;
+const templateId = process.env.EMAILJS_TEMPLATE_ID;
 
 closeButton.onclick = function() {
     modal.style.display = "none";
@@ -39,14 +41,14 @@ contactForm.addEventListener('submit', function (e) {
     };
 
     // Send email using EmailJS
-    emailjs.send('service_1j3hi3i', 'template_cabh7lo', templateParams)
+    emailjs.send(serviceId, templateId, templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             sendButton.innerHTML = 'Send Message';
             sendButton.disabled = false;
             modal.style.display = "block";
             contactForm.reset();
-                  
+
         }, function(error) {
             console.log('FAILED...', error);
             alert('An error occurred while sending your message. Please try again later.');
