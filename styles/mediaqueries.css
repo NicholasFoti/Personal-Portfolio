@@ -1,226 +1,206 @@
+/* mediaqueries.css */
 
-@media screen and (min-height: 900px){
-  #profile{
-    height: 80vh;
-  }
-}
-@media screen and (max-width: 5000px) {
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
+/* Default styles (for screens above 1200px) are defined in style.css */
 
-@media screen and (min-width: 2000px){
-  #about{
-    height: 70vh;
+/* Screens 1200px and below */
+@media (max-width: 1200px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
   }
-}
-
-@media screen and (max-width: 1400px) {
-  .about-containers {
-    flex-wrap: wrap;
+  .hero-image{
+    order: -1;
   }
-  #contact,
-  #projects {
-    height: fit-content;
+  .hero-image img {
+    width: 70%;
   }
-}
-
-@media screen and (min-width: 1401px) {
-
-  .project-containers {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 6rem; 
-    justify-content: center; 
-    align-items: start; 
-    max-width: 1200px; 
-    min-height: 100vh; 
-    margin: 0 auto; 
-  }
-
-  .project-details-container {
-    width: 100%;
-    max-width: none;
-    display: flex; 
+  .about-content {
     flex-direction: column;
-    justify-content: space-between; 
-    height: 100%; 
+    align-items: center;
   }
-
-  .project-img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
+  .skills {
+    border-left: none;
     margin-top: 2rem;
   }
-  #profile,
-  .section-container {
-    display: block;
+  .skills-list li {
+    width: 30%;
   }
-  #about{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  #contact{
-    height: 70vh;
-    margin: 0;
-    align-items: center;
-  }
-  .contact-info-upper-container{
-    width: 100%;
-  }
-  .section-container {
-    display: block;
-  }
-  .project-details-container{
-    margin: 2rem;
-  }
-  .about-text {
-    display: flex;         
-    justify-content: center; 
-    align-items: center;   
-    width: 100%;
-    padding-top: 2rem;      
-    margin-right: 0;        
-  }
-  .text-container{
-    padding-bottom: 2rem;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  .title-about{
-    text-align: center;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .section-container{
-    margin: 0;
-  }
-  .about-containers {
-    margin-top: 0;
-    flex-direction: row;
-  }
-  .about-details-container{
-    flex-direction: column;
+  .nav-links li a {
+    font-size: 1.2rem;
   }
 }
 
-@media screen and (max-width: 775px) {
-footer {
-  height: 40vh;
+/* Screens 992px and below */
+@media (max-width: 992px) {
+  /* Navigation */
+  .nav-links {
+    display: none;
   }
-#contact{
-    height: 100vh;
-    margin: 0;
+  #hero img{
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 90px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #0a0a0a;
+    align-items: center;
+    z-index: 1;
+  }
+  .nav-active li {
+    margin: 1rem 0;
+  }
+  /* Navigation Dots */
+  .navigation-dots {
+    display: none;
+  }
+  /* Hero Section */
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .hero-image img {
+    width: 70%;
+  }
+  /* About Section */
+  .about-content {
     align-items: center;
   }
-  #about{
-    margin: 0;
+  .skills-list li {
+    width: 45%;
   }
-  .section-container{
-    margin: 0;
+  /* Projects Section */
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
-  #profile {
-    height: 100vh;
-    margin-bottom: 0;
+  /* Adjust other elements as needed */
+}
+
+/* Screens 768px and below */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 10px;
   }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container{
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  #contact h1{
-    text-align: center;
-    font-size: 50px;
-  }
-  .contact-info-upper-container{
-    width: 100%;
-  }
-  #contact a{
-    font-size: 1rem;
-  }
-  #contact i{
-    font-size: 1rem;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
+  /* Hero Section */
+  .hero-text h1 {
     font-size: 2rem;
   }
-  .text-container {
-    text-align: justify;
+  .hero-text h2 {
+    font-size: 1.5rem;
   }
-  .scroller{
-    max-width: 300px;
+  .hero-image img {
+    width: 60%;
   }
-  .scroller__inner {
-    animation: none; /* Stop the animation on mobile if it's causing issues */
-    flex-wrap: wrap; /* Stack tags on small screens */
-    justify-content: center; /* Center tags when stacked */
+  /* Skills Section */
+  .skills-list li {
+    width: 45%;
+    margin: 10px;
   }
-  
-  .tag-list li {
-    /* Adjust size and spacing for mobile */
-    font-size: 0.75rem;
-    padding: 0.5rem;
+  /* Contact Form */
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+  /* Contact Section */
+  #contact h2 {
+    font-size: 2.5rem;
+  }
+  #contact p {
+    font-size: 1rem;
+  }
+  /* Footer */
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Screens 576px and below */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  /* Navigation */
+  .navbar-logo {
+    padding-left: 10px;
+  }
+  .hamburger span {
+    width: 20px;
+  }
+  /* Hero Section */
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+  .hero-buttons .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .hero-image img {
+    width: 50%;
+  }
+  /* About Section */
+  .about-text p {
+    font-size: 1rem;
+  }
+  .skills-list li {
+    width: 100%;
+  }
+  /* Projects Section */
+  .project-card {
+    max-width: 100%;
+  }
+  /* Contact Form */
+  .contact-form {
+    padding: 0;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  /* Footer */
+  footer p {
+    font-size: 0.9rem;
+  }
+  .modal-content {
+    width: 90%;
+  }
+}
+
+/* Additional adjustments */
+
+/* Hide navigation dots on smaller screens */
+@media (max-width: 992px) {
+  .navigation-dots {
+    display: none;
+  }
+}
+
+/* Adjust the modal for smaller screens */
+@media (max-width: 576px) {
+  .modal-content {
+    width: 90%;
   }
 }

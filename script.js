@@ -29,7 +29,8 @@ contactForm.addEventListener('submit', function (e) {
     const templateParams = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        message: document.getElementById('message').value
+        message: document.getElementById('message').value,
+        from_name: document.getElementsById('name').value
     };
 
     // Send email using EmailJS
