@@ -30,7 +30,7 @@ contactForm.addEventListener('submit', function (e) {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         message: document.getElementById('message').value,
-        from_name: document.getElementsById('name').value
+        from_name: document.getElementById('name').value
     };
 
     // Send email using EmailJS
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingSpeed = 99;
 
     let index = 0;
-    textElement.textContent = ''; // Clear the text content
+    textElement.textContent = '';
 
     function typeWriter() {
         if (index < text.length) {
@@ -74,7 +74,6 @@ anchorLinks.forEach(link => {
         if (hash !== '') {
             e.preventDefault();
 
-            // Scroll to the target element smoothly
             document.querySelector(hash).scrollIntoView({
                 behavior: 'smooth'
             });
@@ -104,26 +103,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to the clicked button
             button.classList.add('active');
 
-            // First fade out all project cards
+            // Filter and show/hide cards using CSS classes
             projectCards.forEach(card => {
-                card.classList.add('hidden'); // Add hidden class for fade out
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
             });
-
-            // Wait for the fade out transition to complete (match transition duration in CSS)
-            setTimeout(() => {
-                // Now filter and show the appropriate project cards
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.classList.remove('hidden'); // Remove hidden to fade in
-                        card.style.display = 'block'; // Show matching cards
-                    } else {
-                        card.style.display = 'none'; // Hide non-matching cards after fade-out
-                    }
-                });
-            }, 500); // 500ms delay matches the fade-out duration
         });
     });
 });
+
 
 document.querySelectorAll('.navigation-dots .dot').forEach(dot => {
     dot.addEventListener('click', function(e) {

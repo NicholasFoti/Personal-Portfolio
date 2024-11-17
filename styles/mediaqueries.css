@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 90px; /* Adjust based on navbar height */
+    top: 90px;
     left: 0;
     width: 100%;
     background-color: #0a0a0a;
@@ -81,7 +81,6 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  /* Adjust other elements as needed */
 }
 
 /* Screens 768px and below */

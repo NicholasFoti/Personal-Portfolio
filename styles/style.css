@@ -480,21 +480,19 @@ body {
   background: #1a1a1a;
   border: 0.1px solid #305268;
   border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease, visibility 0.5s ease;
   color: #ffffff;
   text-align: center;
   display: flex;
   max-width: 400px;
-  width: 100%;
   flex-direction: column;
-  height: 100%;
   opacity: 1;
 }
 
 .project-card.hidden {
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
 }
 
 .project-card img {
