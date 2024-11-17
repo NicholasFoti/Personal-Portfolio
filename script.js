@@ -70,15 +70,19 @@ const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
 anchorLinks.forEach(link => {
     link.addEventListener('click', function (e) {
-        if (this.hash !== '') {
+        const hash = this.getAttribute('href');
+        if (hash !== '') {
             e.preventDefault();
-            const hash = this.hash;
 
+            // Scroll to the target element smoothly
             document.querySelector(hash).scrollIntoView({
                 behavior: 'smooth'
             });
 
-            // Close mobile menu after click
+            // Update the URL hash without jumping
+            history.pushState(null, null, hash);
+
+            // Close mobile menu after click (if applicable)
             if (navLinks.classList.contains('nav-active')) {
                 navLinks.classList.remove('nav-active');
                 hamburger.classList.remove('toggle');
