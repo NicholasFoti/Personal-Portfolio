@@ -45,6 +45,26 @@ contactForm.addEventListener('submit', function (e) {
         });
 });
 
+// Typewriter Effect
+document.addEventListener('DOMContentLoaded', function() {
+    const textElement = document.getElementById('typewriter-text');
+    const text = textElement.textContent;
+    const typingSpeed = 99;
+
+    let index = 0;
+    textElement.textContent = ''; // Clear the text content
+
+    function typeWriter() {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, typingSpeed);
+        }
+    }
+
+    typeWriter();
+});
+
 // Smooth Scroll for Anchor Links
 const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
