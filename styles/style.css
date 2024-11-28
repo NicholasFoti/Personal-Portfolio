@@ -146,7 +146,7 @@ body {
 
 .navigation-dots .dot:hover,
 .navigation-dots .dot.active {
-  background-color: #39a0e0; /* Change to your theme color */
+  background-color: #39a0e0;
 }
 
 /* Hero Section */
@@ -555,29 +555,29 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Centers the form elements */
+  align-items: center;  
   padding: 20px;
-  max-width: 600px;  /* Restricts form width */
-  margin: 0 auto;  /* Centers the form horizontally */
+  max-width: 600px;  
+  margin: 0 auto;  
 }
 
 .contact-form form {
-  width: 100%;  /* Ensures the form uses the full width of the container */
+  width: 100%;  
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Aligns children (inputs) centrally */
+  align-items: center;  
 }
 
 .form-group {
-  width: 100%;  /* Makes each input group take the full width */
-  margin-bottom: 20px;  /* Spacing between each form group */
+  width: 100%;  
+  margin-bottom: 20px;  
 }
 
 .form-group label {
-  display: block;  /* Ensures the label takes the full width */
-  text-align: left;  /* Aligns the label text to the left */
-  margin-bottom: 8px;  /* Space between label and input */
-  color: #39a0e0;  /* Styling the color to match theme */
+  display: block; 
+  text-align: left;  
+  margin-bottom: 8px;
+  color: #39a0e0; 
   font-size: 1rem;
 }
 
@@ -605,10 +605,10 @@ body {
 
 .form-group input,
 .form-group textarea {
-  width: 100%;  /* Ensures inputs and textarea take the full width */
+  width: 100%; 
   padding: 10px;
   border-radius: 5px;
-  border: 2px solid #39a0e0;  /* Border color matching the theme */
+  border: 2px solid #39a0e0;  
   background-color: #1a1a1a;
   color: #ffffff;
   font-size: 1rem;
