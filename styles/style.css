@@ -785,3 +785,21 @@ footer {
         margin-bottom: 1rem;
     }
 }
+
+.form-group input,
+.form-group textarea {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(57, 160, 224, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #39a0e0;
+    box-shadow: 0 0 0 2px rgba(57, 160, 224, 0.2);
+    outline: none;
+}
