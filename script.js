@@ -121,6 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Add flip functionality
+    document.querySelectorAll('.flip-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const card = e.target.closest('.project-card');
+            card.classList.toggle('flipped');
+        });
+    });
 });
 
 
@@ -150,4 +158,15 @@ window.addEventListener('scroll', () => {
             });
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillsSlider = document.querySelector('.skills-slider');
+
+    if (window.innerWidth <= 1200) {
+        skillsSlider.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            skillsSlider.scrollLeft += e.deltaY;
+        });
+    }
 });

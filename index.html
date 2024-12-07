@@ -105,44 +105,46 @@
                     </div>
                     <div class="skills">
                         <h2>SKILLS</h2>
-                        <ul class="skills-list">
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                                <span>HTML5</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                                <span>CSS3</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-                                <span>C#</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-                                <span>C++</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                                <span>PYTHON</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                                <span>JAVASCRIPT</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-                                <span>SQL</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
-                                <span>NODE.JS</span>
-                            </li>
-                            <li>
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                                <span>GIT</span>
-                            </li>
-                        </ul>
+                        <div class="skills-slider">
+                            <ul class="skills-list">
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                    <span>HTML5</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                                    <span>CSS3</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                                    <span>C#</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                                    <span>React</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                                    <span>PYTHON</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                    <span>JAVASCRIPT</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                                    <span>SQL</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
+                                    <span>NODE.JS</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                                    <span>GIT</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,65 +165,156 @@
                 <div class="projects-grid">
                     <!-- Project Card 1 -->
                     <div class="project-card" data-category="web-app">
-                        <i class="fa-solid fa-dice fa-3x" style="color: #39a0e0;"></i>
-                        <h3>FAKE CASINO WEBSITE</h3>
-                        <p>A full-stack web application that simulates a multiplayer roulette casino experience using Socket.IO. Features real-time betting, live chat, and virtual currency management.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NicholasFoti/YoutubeToMP3Converter" target="_blank">GitHub</a>
-                            <a href="https://nifo-youtube-to-mp3-mp4-converter.onrender.com" target="_blank">Live Preview</a>
+                        <div class="card-front">
+                            <i class="fa-solid fa-dice fa-3x" style="color: #39a0e0;"></i>
+                            <h3>FAKE CASINO WEBSITE</h3>
+                            <p>A full-stack casino application that features a live chat, a live casino, and a live betting system.</p>
+                            <div class="project-languages">
+                                <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+                                <i class="devicon-react-original colored" title="React"></i>
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NicholasFoti/FakeCasinoWebsite" target="_blank">GitHub</a>
+                                <a href="https://fakecasinowebsite.onrender.com" target="_blank">Live Preview</a>
+                            </div>
+                            <button class="more-info-btn flip-btn">More Info</button>
+                        </div>
+                        <div class="card-back">
+                            <h3>Technical Details</h3>
+                            <ul>
+                                <li>- Implemented WebSocket connections using Socket.IO for real-time multiplayer interactions including a live chat</li>
+                                <li>- Built and implemented backend APIs with Express.js for user authentication and data management</li>
+                                <li>- Designed a PostgreSQL database to store user profiles, transaction history, game history, and bet data</li>
+                            </ul>
+                            <button class="back-to-project-btn flip-btn">Back to Project</button>
                         </div>
                     </div>
                     <!-- Project Card 2 -->
-                    <div class="project-card" data-category="web-app">
-                        <i class="fa-brands fa-youtube fa-3x" style="color: #39a0e0;"></i>
-                        <h3>YOUTUBE MEDIA CONVERTER</h3>
-                        <p>Convert YouTube videos to either .mp3 or .mp4 files. Perfect for extracting sound clips for personal projects.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NicholasFoti/YoutubeToMP3Converter" target="_blank">GitHub</a>
-                            <a href="https://nifo-youtube-to-mp3-mp4-converter.onrender.com" target="_blank">Live Preview</a>
+                    <div class="project-card binary" data-category="algorithm">
+                        <div class="card-front">
+                            <i class="fa-solid fa-chart-column fa-3x" style="color: #39a0e0;"></i>
+                            <h3>BST-AVL TREE VISUALISER</h3>
+                            <p>Create and manipulate your own binary search tree structure. Add, delete, and search nodes visually.</p>
+                            <div class="project-languages">
+                                <i class="devicon-python-plain colored" title="Python"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NicholasFoti/BST-AVL-Tree-Visualiser" target="_blank">GitHub</a>
+                                <a href="https://www.online-python.com/Exr04pCsyK" target="_blank">Live Preview</a>
+                            </div>
+                            <button class="more-info-btn flip-btn">More Info</button>
+                        </div>
+                        <div class="card-back">
+                            <h3>Technical Details</h3>
+                            <ul>
+                                <li>- Used Python for the program logic and user interface</li>
+                                <li>- Allows users to print and see the tree structure</li>
+                                <li>- Added features like node insertion, deletion, and searching</li>
+                                <li>- Shows trees in different traversal methods</li>
+                            </ul>
+                            <button class="back-to-project-btn flip-btn">Back to Project</button>
                         </div>
                     </div>
                     <!-- Project Card 3 -->
-                    <div class="project-card binary" data-category="algorithm">
-                        <i class="ti ti-binary-tree"></i>
-                        <h3>BST-AVL TREE VISUALISER</h3>
-                        <p>Create and manipulate your own binary search tree structure. Add, delete, and search nodes visually.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NicholasFoti/BST-AVL-Tree-Visualiser" target="_blank">GitHub</a>
-                            <a href="https://www.online-python.com/Exr04pCsyK" target="_blank">Live Preview</a>
+                    <div class="project-card" data-category="web-app">
+                        <div class="card-front">
+                            <i class="fa-brands fa-youtube fa-3x" style="color: #39a0e0;"></i>
+                            <h3>YOUTUBE MEDIA CONVERTER</h3>
+                            <p>Convert YouTube videos to either .mp3 or .mp4 files. Perfect for extracting sound clips for personal projects.</p>
+                            <div class="project-languages">
+                                <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NicholasFoti/YoutubeToMP3Converter" target="_blank">GitHub</a>
+                                <a href="https://nifo-youtube-to-mp3-mp4-converter.onrender.com" target="_blank">Live Preview</a>
+                            </div>
+                            <button class="more-info-btn flip-btn">More Info</button>
+                        </div>
+                        <div class="card-back">
+                            <h3>Technical Details</h3>
+                            <ul>
+                                <li>- Built with Node.js and Express for backend services</li>
+                                <li>- Utilizes YouTube API for video data retrieval</li>
+                                <li>- Converts media using FFmpeg</li>
+                            </ul>
+                            <button class="back-to-project-btn flip-btn">Back to Project</button>
                         </div>
                     </div>
                     <!-- Project Card 4 -->
                     <div class="project-card" data-category="web-app"> 
-                        <i class="fa fa-cloud-sun fa-3x" style="color: #39a0e0;"></i>
-                        <h3>LIVE WEATHER AND FORECAST CHECKER</h3>
-                        <p>Check live weather conditions and get a 5-day forecast for your selected location.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NicholasFoti/Weather-App" target="_blank">
-                                GitHub
-                            </a>
-                            <a href="https://nfotiweather.netlify.app" target="_blank">
-                                Live Preview 
-                            </a>
+                        <div class="card-front">
+                            <i class="fa fa-cloud-sun fa-3x" style="color: #39a0e0;"></i>
+                            <h3>WEATHER AND FORECAST APP</h3>
+                            <p>Check live weather conditions and get a 5-day forecast for any location in the world.</p>
+                            <div class="project-languages">
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NicholasFoti/Weather-App" target="_blank">GitHub</a>
+                                <a href="https://nfotiweather.netlify.app" target="_blank">Live Preview</a>
+                            </div>
+                            <button class="more-info-btn flip-btn">More Info</button>
+                        </div>
+                        <div class="card-back">
+                            <h3>Technical Details</h3>
+                            <ul>
+                                <li>- Utilized OpenWeatherMap API for weather data</li>
+                                <li>- Implemented JavaScript for dynamic content loading and interactive features</li>
+                            </ul>
+                            <button class="back-to-project-btn flip-btn">Back to Project</button>
                         </div>
                     </div>                    
                     <!-- Project Card 5 -->
                     <div class="project-card" data-category="mobile-app">
-                        <i class="fa fa-gamepad fa-3x" style="color: #39a0e0;"></i>
-                        <h3>GAME OF LIFE - MOBILE APP</h3>
-                        <p>A mobile application based on Conway's Game of Life. Create, simulate, and save custom grids.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NicholasFoti/Conways-Game-of-Life" target="_blank">GitHub</a>
-                            <a href="https://nfotigameoflife.netlify.app" target="_blank">Live Preview</a>
+                        <div class="card-front">
+                            <i class="fa fa-gamepad fa-3x" style="color: #39a0e0;"></i>
+                            <h3>GAME OF LIFE - MOBILE APP</h3>
+                            <p>A mobile application based on Conway's Game of Life. Create, simulate, and save custom grids.</p>
+                            <div class="project-languages">
+                                <i class="devicon-lua-plain" title="Lua"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NicholasFoti/Conways-Game-of-Life" target="_blank">GitHub</a>
+                                <a href="https://nfotigameoflife.netlify.app" target="_blank">Live Preview</a>
+                            </div>
+                            <button class="more-info-btn flip-btn">More Info</button>
+                        </div>
+                        <div class="card-back">
+                            <h3>Technical Details</h3>
+                            <ul>
+                                <li>- Utilized Lua for game logic and user interface</li>
+                                <li>- Implemented features like custom grid creation and simulation</li>
+                                <li>- Allowed users to save and load their own grids</li>
+                            </ul>
+                            <button class="back-to-project-btn flip-btn">Back to Project</button>
                         </div>
                     </div>
                     <!-- Project Card 6 -->
                     <div class="project-card">
-                        <i class="fa fa-book fa-3x" style="color: #39a0e0;"></i>
-                        <h3>DICTIONARY APPLICATION</h3>
-                        <p>A C++ program to load, manipulate, and search dictionary files. Includes features like palindrome finder and Wordle cheats.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NicholasFoti/Dictionary-Application" target="_blank">GitHub</a>
+                        <div class="card-front">
+                            <i class="fa fa-book fa-3x" style="color: #39a0e0;"></i>
+                            <h3>DICTIONARY APPLICATION</h3>
+                            <p>A C++ program to load, manipulate, and search words from a dictionary file.</p>
+                            <div class="project-languages">
+                                <i class="devicon-cplusplus-plain colored" title="C++"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NicholasFoti/Dictionary-Application" target="_blank">GitHub</a>
+                            </div>
+                            <button class="more-info-btn flip-btn">More Info</button>
+                        </div>
+                        <div class="card-back">
+                            <h3>Technical Details</h3>
+                            <ul>
+                                <li>- Utilized C++ for the program logic and user interface</li>
+                                <li>- Implemented features like palindrome finder and Wordle cheats</li>
+                            </ul>
+                            <button class="back-to-project-btn flip-btn">Back to Project</button>
                         </div>
                     </div>
                 </div>
