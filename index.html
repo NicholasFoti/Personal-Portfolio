@@ -58,6 +58,7 @@
         <div class="navigation-dots">
             <a href="#hero" class="dot" aria-label="Go to Hero Section"></a>
             <a href="#about" class="dot" aria-label="Go to About Section"></a>
+            <a href="#experience" class="dot" aria-label="Go to Experience Section"></a>
             <a href="#projects" class="dot" aria-label="Go to Projects Section"></a>
             <a href="#contact" class="dot" aria-label="Go to Contact Section"></a>
         </div>
@@ -91,7 +92,9 @@
                 <div class="about-content">
                     <div class="about-text">
                         <h2>ABOUT ME</h2>
-                        <p>I am a computer science graduate focused on software engineering, driven to make an impact in the tech industry. With a strong problem-solving foundation and a quick-learning mindset, I’m ready to apply my skills to real-world projects. I'm eager to join a dynamic environment where I can grow and contribute to impactful, innovative solutions.</p>
+                        <div class="about-text-container">
+                            <p>I am a computer science graduate focused on software engineering, driven to make an impact in the tech industry. With a strong problem-solving foundation and a quick-learning mindset, I’m ready to apply my skills to real-world projects.<br><br> I'm eager to join a dynamic environment where I can grow and contribute to impactful, innovative solutions.</p>
+                        </div>
                         <div class="about-education">
                             <h3>EDUCATION</h3>
                             <div class="education-card">
@@ -108,14 +111,6 @@
                         <div class="skills-slider">
                             <ul class="skills-list">
                                 <li>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                                    <span>HTML5</span>
-                                </li>
-                                <li>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                                    <span>CSS3</span>
-                                </li>
-                                <li>
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
                                     <span>C#</span>
                                 </li>
@@ -124,25 +119,60 @@
                                     <span>React</span>
                                 </li>
                                 <li>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                                    <span>PYTHON</span>
-                                </li>
-                                <li>
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                                <li>
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-                                    <span>SQL</span>
+                                    <span>JavaScript</span>
                                 </li>
                                 <li>
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
-                                    <span>NODE.JS</span>
+                                    <span>Node.js</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                                    <span>Python</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                    <span>HTML5</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                                    <span>CSS3</span>
+                                </li>
+                                <li>
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+                                    <span>PostgreSQL</span>
                                 </li>
                                 <li>
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-                                    <span>GIT</span>
+                                    <span>Git</span>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="divider">
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2 data-aos="fade-up">EXPERIENCE</h2>
+                    <div class="experience-grid">
+                        <!-- Experience Card 1 -->
+                        <div class="experience-card redi" data-aos="fade-right">
+                            <div class="timeline-dot dot-redi"></div>
+                            <div class="experience-header">
+                                <h3>Software Engineer Intern</h3>
+                                <span class="experience-date">Jul 2024 - Nov 2024</span>
+                            </div>
+                            <div class="experience-title">
+                            <h4>Redi Software</h4><img src="/assets/redi-logo.png">
+                            </div>
+                            <ul>
+                                <li>Developed and refined C#-based Azure Function API connectors that, upon OAuth-triggered requests, automatically retrieve, transform, and calculate data from external third-party platforms, ensuring that the processed results are readily available for seamless visualisation on user dashboards.</li>
+                                <li>Enhanced data workflows by leveraging Azure Functions, Queues, and Key Vault to automate and secure the entire data processing pipeline, improving task execution efficiency while ensuring end-to-end data security and compliance.</li>
+                                <li>Designed SQL database tables to efficiently store required API connector configurations, ensuring streamlined data retrieval and maintainability.</li>
                             </ul>
                         </div>
                     </div>
