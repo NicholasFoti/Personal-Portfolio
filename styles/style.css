@@ -481,7 +481,7 @@ body {
 .projects-grid {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 1rem;
   max-width: 1200px;
@@ -490,7 +490,6 @@ body {
 
 .project-card {
   background: rgba(26, 26, 26, 0.8);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(57, 160, 224, 0.2);
   border-radius: 15px;
   padding: 1.5rem;
