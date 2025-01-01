@@ -421,6 +421,16 @@ body {
   width: 120px;
   margin: 15px;
   transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.skills-list li img {
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+}
+
+.skills-list li img:hover {
+  transform: scale(1.1);
 }
 
 .skill-icon {
@@ -1112,4 +1122,29 @@ footer {
 .experience-card {
     position: relative;
     margin-bottom: 3rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: block;
+  }
 }
