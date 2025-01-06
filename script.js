@@ -146,7 +146,7 @@ window.addEventListener('scroll', () => {
     const scrollPosition = window.pageYOffset;
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 250; // Adjust this value to trigger sooner
+        const sectionTop = section.offsetTop - 250;
         const sectionBottom = sectionTop + section.offsetHeight;
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
