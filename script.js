@@ -136,7 +136,8 @@ document.querySelectorAll('.navigation-dots .dot').forEach(dot => {
     dot.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100; // Adjust the offset for one scroll up
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
     });
 });
 
@@ -146,7 +147,7 @@ window.addEventListener('scroll', () => {
     const scrollPosition = window.pageYOffset;
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 250;
+        const sectionTop = section.offsetTop - 350;
         const sectionBottom = sectionTop + section.offsetHeight;
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -158,15 +159,4 @@ window.addEventListener('scroll', () => {
             });
         }
     });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const skillsSlider = document.querySelector('.skills-slider');
-
-    if (window.innerWidth <= 1200) {
-        skillsSlider.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            skillsSlider.scrollLeft += e.deltaY;
-        });
-    }
 });

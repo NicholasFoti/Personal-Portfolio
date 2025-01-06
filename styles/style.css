@@ -397,7 +397,7 @@ body {
 }
 
 .skill-category {
-  background: rgba(15, 15, 15, 0.6);
+  background: rgba(22, 22, 22, 0.432);
   border: 1px solid transparent;
   border-radius: 16px;
   padding: 2rem;
@@ -420,8 +420,12 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  border-radius: 16px;
   background: linear-gradient(90deg, transparent, rgba(7, 184, 238, 0.897), transparent);
+}
+
+.express-icon {
+  background-color: rgb(43, 43, 43);
+  border-radius: 30px;
 }
 
 .skill-category:hover {
