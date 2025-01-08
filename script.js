@@ -89,7 +89,7 @@ anchorLinks.forEach(link => {
             // Update the URL hash without jumping
             history.pushState(null, null, hash);
 
-            // Close mobile menu after click (if applicable)
+            // Close mobile menu after click
             if (navLinks.classList.contains('nav-active')) {
                 navLinks.classList.remove('nav-active');
                 hamburger.classList.remove('toggle');
@@ -121,22 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-    // Add flip functionality
-    document.querySelectorAll('.flip-btn').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const card = e.target.closest('.project-card');
-            card.classList.toggle('flipped');
-        });
-    });
 });
-
 
 document.querySelectorAll('.navigation-dots .dot').forEach(dot => {
     dot.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100; // Adjust the offset for one scroll up
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
     });
 });

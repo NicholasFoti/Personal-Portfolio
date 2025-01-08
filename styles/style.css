@@ -411,6 +411,7 @@ body {
   justify-content: center;
   transition: all 0.3s ease !important;
   z-index: 1;
+  box-shadow: 0 0 30px #000000;
 }
 
 .skill-category::before {
@@ -420,7 +421,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(7, 184, 238, 0.479), transparent);
+  background: linear-gradient(90deg, transparent, #39a0e08c, transparent);
 }
 
 .express-icon {
@@ -442,6 +443,7 @@ body {
 .category-header i {
   font-size: 1.5rem;
   color: #39a0e0;
+  text-shadow: 0 0 20px #39a0e0;
 }
 
 .category-header h3 {
@@ -519,13 +521,17 @@ body {
 
 .project-languages {
   display: flex;
+  gap: 1.5rem;
   justify-content: center;
-  margin: 10px 0;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 .project-languages i {
-  font-size: 2rem; 
-  margin-right: 5px; 
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-languages i:last-child {
@@ -549,61 +555,37 @@ body {
 }
 
 .project-card {
-  background: rgba(26, 26, 26, 0.8);
-  border: 1px solid rgba(57, 160, 224, 0.2);
-  border-radius: 15px;
+  background: rgba(19, 19, 19, 0.932);
   padding: 1.5rem;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  height: 500px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease !important;
+  z-index: 1;
+  box-shadow: 0 0 40px #000000;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+}
+
+.card-front {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  width: 360px;
+  z-index: 2;
 }
 
-.card-front{
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.project-card.hidden {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-}
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(57, 160, 224, 0.1) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(57, 160, 224, 0.5);
-  box-shadow: 0 10px 30px rgba(57, 160, 224, 0.2);
-}
-
-.project-card:hover::before {
-  opacity: 1;
+.project-languages {
+  margin: 0.5rem 0;
 }
 
 .project-card i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   transition: transform 0.4s ease;
 }
@@ -620,16 +602,59 @@ body {
 }
 
 .project-card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #cccccc;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  flex: 1;
+}
+
+.project-links {
+  margin-top: auto;
+  padding: 0.5rem 0;
+}
+
+.more-info-btn {
+  margin-top: 0.5rem;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px; 
+  padding: 1px;
+  background: linear-gradient(180deg, #39a0e08c, transparent, transparent, #39a0e08c);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(57, 160, 224, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-card:not(.flipped):hover i {
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .project-card:hover .project-links {
@@ -670,10 +695,6 @@ body {
 
 .project-card.flipped .card-back {
   opacity: 1;
-}
-
-.more-info-btn {
-  margin-top: 20px;
 }
 
 .project-card.flipped i {
@@ -752,7 +773,7 @@ body {
 
 .divider {
   border: none;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(to right, transparent, #39a0e0 50%, transparent);
   opacity: 0.2;
   box-shadow: 0 0 0 rgb(0, 225, 255);
@@ -760,7 +781,7 @@ body {
 }
 
 .about-divider {
-  box-shadow: 0 0 1px rgb(0, 225, 255);
+  height: 1px;
   width: 50%;
   margin: 0 auto;
   margin-top: 3rem;
@@ -1026,6 +1047,8 @@ footer {
   flex-direction: column;
   transition: all 0.3s ease !important;
   z-index: 1;
+  box-shadow: 0 0 40px #000000;
+
   
   /* Gradient border */
   border: 1px solid transparent;
@@ -1138,4 +1161,36 @@ footer {
   .hidden-mobile {
     display: block;
   }
+}
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: tra;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #39a0e0, #16f2b3);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #16f2b3, #39a0e0);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #39a0e09f transparent;
+}
+
+.project-card.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
